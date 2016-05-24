@@ -45,3 +45,25 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+/public/storage
+
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+.tags*
+*.phpproj
+.vs/*
+
+
+# Elastic Beanstalk Files
+
+.elasticbeanstalk/*
+
+!.elasticbeanstalk/*.cfg.yml
+
+!.elasticbeanstalk/*.global.yml
+.env.example
