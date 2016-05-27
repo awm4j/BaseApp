@@ -5,17 +5,22 @@
 @stop
 
 @section('content')
-  <form class="form-signin">
+
+  {!! Form::open(['url' => '#', 'class' => 'form-signin' ]) !!}
+
+    @include('includes.status')
+
     <h2 class="form-signin-heading">Please sign in</h2>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email address', 'required', 'autofocus', 'id' => 'inputEmail' ]) !!}
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      {!! Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password', 'required',  'id' => 'inputPassword' ]) !!}
     <div class="checkbox">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        {!! Form::checkbox('remember', 1) !!} Remember me
       </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  </form>
+
+  {!! Form::close() !!}
 @endsection
