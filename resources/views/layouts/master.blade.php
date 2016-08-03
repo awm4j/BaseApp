@@ -69,9 +69,9 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Home</a></li>
-            <li class="active"><a href="./">Login <span class="sr-only">(current)</span></a></li>
-            <li><a href="../navbar-fixed-top/">Register</a></li>
+            <li><a href="../">Home</a></li>
+            <li class="active"><a href="./login">Login <span class="sr-only">(current)</span></a></li>
+            <li><a href="./register">Register</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
