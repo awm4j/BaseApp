@@ -12,20 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('forms.login');
-});
+Route::auth();
 
-Route::get('/register', function () {
-    return view('forms.register');
-});
-
-Route::get('/password-reset', function () {
-    return view('forms.password-reset');
-});
-Route::get('/password-confirm', function () {
-    return view('forms.password-reset-form');
-});
+Route::get('/home', 'HomeController@index');

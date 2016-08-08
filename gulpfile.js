@@ -1,5 +1,4 @@
 var elixir = require('laravel-elixir');
-var gulp = require('gulp');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,29 +11,6 @@ var gulp = require('gulp');
  |
  */
 
-
 elixir(function(mix) {
-  mix.styles([
-    'bootstrap.min.css',
-    'bootstrap-theme.min.css'
-  ], 'public/css/core.css', './resources/assets/css/');
-
-  mix.styles([
-    'navbar-static-top.css'
-  ], 'public/css/custom.css', './resources/assets/css/');
-
-  mix.styles([
-    'login.css'
-  ], 'public/css/login.css', './resources/assets/css/');
-
-  mix.scripts([
-    'bootstrap.min.js'
-  ], 'public/js/core.js', './resources/assets/js/');
-
-  //mix.version(['css/all.css', 'js/all.js']);
-});
-
-
-gulp.task('fonts', function() {
-  return gulp.src('resources/assets/fonts/**/*').pipe(gulp.dest('public/fonts'));
+    mix.sass('app.scss');
 });
